@@ -1,0 +1,2 @@
+# JavaScript
+Learning vanilla JavaScript
