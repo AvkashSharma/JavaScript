@@ -26,14 +26,10 @@ const pauseButton = document.querySelector('#pause');
 const timer = new Timer(durationInput, startButton, pauseButton);
 // timer.start();
 
-const colors = {
-	printColor() {
-		console.log(this);
-		const printThis = () => {
-			console.log(this);
-		};
-		printThis();
-	}
+const printThis = function() {
+	console.log(this);
 };
 
-colors.printColor();
+// 'this is equal to the first argument of 'bind', 'call', or 'apply'
+// printThis.call({ color: 'red' });
+// printThis.apply({ color: 'red' });
