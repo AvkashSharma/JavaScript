@@ -26,10 +26,16 @@ const pauseButton = document.querySelector('#pause');
 const timer = new Timer(durationInput, startButton, pauseButton);
 // timer.start();
 
-const printThis = function() {
-	console.log(this);
+// this is equal to whatever is to the left of the '.' in the method call
+const colors = {
+	printColor() {
+		console.log(this);
+	}
 };
 
-// 'this is equal to the first argument of 'bind', 'call', or 'apply'
-// printThis.call({ color: 'red' });
-// printThis.apply({ color: 'red' });
+const randomObject = {
+	a: 1
+};
+
+randomObject.printColor = colors.printColor;
+randomObject.printColor();
